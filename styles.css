@@ -483,9 +483,26 @@ a {
   grid-column: span 2;
 }
 
+body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#fashion .window,
+#fashion .window-content,
+#fashion .title-bar,
+#fashion .title-text,
+#fashion .look-card,
+#fashion .fabric-swatches,
+#fashion .page-gallery model-viewer {
+  --section-bg: #fff3e0;
+  --section-text: #e65100;
+  --section-border: #ef6c00;
+  --section-accent: #ff9800;
+}
+
 #fashion .window-content {
-  background: #fff3e0;
-  color: #e65100;
+  background: var(--section-bg);
+  color: var(--section-text);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.75px;
 }
@@ -493,7 +510,8 @@ a {
 #fashion .title-bar,
 #fashion .title-text {
   background: #3e2723;
-  color: #fff3e0;
+  color: var(--section-bg);
+  border-bottom-color: #3e2723;
 }
 
 .fashion-lookbook {
@@ -505,23 +523,24 @@ a {
 
 .look-card {
   padding: 10px;
-  border: 1px solid #3e2723;
+  border: 1px solid var(--section-border);
   background: #fff;
   text-transform: uppercase;
   font-size: 10px;
   box-shadow: none;
   letter-spacing: 1.5px;
+  color: var(--section-text);
 }
 
 .look-label {
   font-weight: bold;
   margin-bottom: 6px;
   font-size: 12px;
-  color: #f57c00;
+  color: var(--section-border);
 }
 
 .look-desc {
-  color: #ff6f00;
+  color: #bf360c;
   font-size: 9px;
   letter-spacing: 0.5px;
 }
@@ -532,7 +551,7 @@ a {
   gap: 6px;
   text-transform: uppercase;
   font-size: 9px;
-  color: var(--secondary-text);
+  color: var(--section-border);
 }
 
 .swatch-row {
@@ -543,20 +562,26 @@ a {
 .swatch {
   width: 24px;
   height: 24px;
-  border: 2px solid var(--secondary-text);
-  background: linear-gradient(135deg, var(--accent-1), var(--accent-4));
+  border: 2px solid var(--section-border);
+  background: linear-gradient(135deg, var(--section-accent), var(--section-border));
 }
 
 .swatch:nth-child(2) {
-  background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+  background: linear-gradient(135deg, var(--section-border), var(--section-accent));
 }
 
 .swatch:nth-child(3) {
-  background: linear-gradient(135deg, var(--accent-4), var(--accent-1));
+  background: linear-gradient(135deg, var(--section-accent), var(--section-text));
 }
 
 .swatch:nth-child(4) {
-  background: linear-gradient(135deg, var(--accent-3), var(--accent-2));
+  background: linear-gradient(135deg, var(--section-text), var(--section-accent));
+}
+
+#fashion .page-gallery model-viewer {
+  background: #fff;
+  border-color: var(--section-border);
+  box-shadow: none;
 }
 
 .card {
@@ -577,25 +602,42 @@ a {
   overflow-x: auto;
 }
 
+/* --- Code (Forest Green) --- */
+#code .window,
+#code .window-content,
+#code .title-bar,
+#code .title-text,
+#code .code-terminal,
+#code .module-card,
+#code .code-stack,
+#code .page-gallery model-viewer {
+  --section-bg: #e8f5e9;
+  --section-text: #1b5e20;
+  --section-border: #2e7d32;
+  --section-accent: #66bb6a;
+}
+
 #code .window-content {
-  background: #111;
-  color: #d9fff2;
+  background: var(--section-bg);
+  color: var(--section-text);
+  font-family: "Courier New", monospace;
 }
 
 #code .title-bar,
 #code .title-text {
-  background: #111;
-  color: #64ffda;
+  background: #1b5e20;
+  color: var(--section-bg);
+  border-bottom-color: #1b5e20;
 }
 
 .code-terminal {
   margin-top: 12px;
   padding: 12px;
-  border: 2px solid #64ffda;
-  background: #0a0f0d;
+  border: 2px solid var(--section-border);
+  background: #1b5e20;
   font-family: "Courier New", monospace;
   font-size: 11px;
-  color: #c9fff2;
+  color: #a5d6a7;
   display: grid;
   gap: 6px;
 }
@@ -608,10 +650,33 @@ a {
 }
 
 .module-card {
-  border: 1px solid #64ffda;
+  border: 1px solid var(--section-border);
   padding: 8px;
   font-size: 10px;
   text-transform: uppercase;
+  color: var(--section-text);
+  background: #c8e6c9;
+}
+
+.code-stack {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  text-transform: uppercase;
+  font-size: 9px;
+  color: var(--section-text);
+}
+
+.code-stack span {
+  border: 1px solid var(--section-border);
+  padding: 2px 6px;
+}
+
+#code .page-gallery model-viewer {
+  background: #c8e6c9;
+  border-color: var(--section-border);
+  box-shadow: inset -2px -2px 0 #a5d6a7, inset 2px 2px 0 #ffffff;
 }
 
 .mixer {
@@ -622,16 +687,34 @@ a {
   margin-top: 12px;
 }
 
+/* --- Music (Ocean Blue) --- */
+#music .window,
+#music .window-content,
+#music .title-bar,
+#music .title-text,
+#music .track-list,
+#music .track,
+#music .transport .btn,
+#music .mixer-bar,
+#music .waveform span,
+#music .page-gallery model-viewer {
+  --section-bg: #e0f7fa;
+  --section-text: #01579b;
+  --section-border: #0277bd;
+  --section-accent: #00acc1;
+  --section-accent-2: #4dd0e1;
+}
+
 #music .window-content {
-  background: #e0f7fa;
-  color: #01579b;
+  background: var(--section-bg);
+  color: var(--section-text);
   font-family: "Courier New", monospace;
 }
 
 #music .title-bar,
 #music .title-text {
   background: #263238;
-  color: #e0f7fa;
+  color: var(--section-bg);
   border-bottom-color: #263238;
 }
 
@@ -645,11 +728,11 @@ a {
   display: grid;
   gap: 6px;
   padding: 8px;
-  border: 1px solid #0277bd;
-  background: #00acc1;
+  border: 1px solid var(--section-border);
+  background: #006064;
   font-size: 10px;
   text-transform: uppercase;
-  color: #e0f7fa;
+  color: var(--section-bg);
 }
 
 .track {
@@ -667,8 +750,8 @@ a {
 
 .transport .btn {
   font-size: 10px;
-  background: #0277bd;
-  color: #e0f7fa;
+  background: var(--section-border);
+  color: var(--section-bg);
   border: 1px solid #01579b;
   box-shadow: 2px 2px 0 #01579b;
 }
@@ -688,7 +771,7 @@ a {
 
 .waveform span {
   flex: 1;
-  background: #0277bd;
+  background: var(--section-border);
   height: 50%;
   animation: wave 1.4s ease-in-out infinite;
 }
@@ -707,12 +790,18 @@ a {
   flex: 1;
   background: repeating-linear-gradient(
     0deg,
-    #0277bd,
-    #0277bd 2px,
-    #e0f7fa 2px,
-    #e0f7fa 4px
+    var(--section-border),
+    var(--section-border) 2px,
+    var(--section-bg) 2px,
+    var(--section-bg) 4px
   );
-  border: 1px solid #01579b;
+  border: 1px solid var(--section-border);
+}
+
+#music .page-gallery model-viewer {
+  background: var(--section-bg);
+  border-color: var(--section-border);
+  box-shadow: inset -2px -2px 0 #b2ebf2, inset 2px 2px 0 #ffffff;
 }
 
 .contact-form {
