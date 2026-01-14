@@ -226,6 +226,20 @@
         </div>
         <div class="window-content">
           <p>Fake description: My work blends cinematic pacing with stylized 3D worlds and an analog UI aesthetic.</p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-label">Years</span>
+              <span class="stat-value">08</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Projects</span>
+              <span class="stat-value">120+</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Disciplines</span>
+              <span class="stat-value">Video • 3D • Sound</span>
+            </div>
+          </div>
           <div class="page-gallery">
             <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" camera-controls auto-rotate></model-viewer>
             <model-viewer src="https://modelviewer.dev/shared-assets/models/DamagedHelmet.glb" camera-controls auto-rotate></model-viewer>
@@ -239,10 +253,11 @@
         </div>
         <div class="window-content">
           <p>Fake description: Selected frames, renders, and storyboards that explore mood, color, and motion.</p>
-          <div class="card-grid">
-            <div class="card">Fake artwork: neon alley scene</div>
-            <div class="card">Fake artwork: liquid chrome portrait</div>
-            <div class="card">Fake artwork: retro title sequence</div>
+          <div class="artwork-mosaic">
+            <div class="artwork-card large">Fake artwork: neon alley scene</div>
+            <div class="artwork-card">Fake artwork: liquid chrome portrait</div>
+            <div class="artwork-card">Fake artwork: retro title sequence</div>
+            <div class="artwork-card wide">Fake artwork: volumetric fog study</div>
           </div>
           <div class="page-gallery">
             <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" camera-controls auto-rotate></model-viewer>
@@ -257,6 +272,29 @@
         </div>
         <div class="window-content">
           <p>Fake description: Digital fittings, fabric tests, and runway-ready motion studies for bold silhouettes.</p>
+          <div class="fashion-lookbook">
+            <div class="look-card">
+              <div class="look-label">Look 01</div>
+              <div class="look-desc">Fake description: chrome pleats + neon lining.</div>
+            </div>
+            <div class="look-card">
+              <div class="look-label">Look 02</div>
+              <div class="look-desc">Fake description: utility vest with soft glow.</div>
+            </div>
+            <div class="look-card">
+              <div class="look-label">Look 03</div>
+              <div class="look-desc">Fake description: liquid satin + glass trims.</div>
+            </div>
+          </div>
+          <div class="fabric-swatches">
+            <span>Swatches</span>
+            <div class="swatch-row">
+              <span class="swatch"></span>
+              <span class="swatch"></span>
+              <span class="swatch"></span>
+              <span class="swatch"></span>
+            </div>
+          </div>
           <div class="page-gallery">
             <model-viewer src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" camera-controls auto-rotate></model-viewer>
             <model-viewer src="https://modelviewer.dev/shared-assets/models/Car.glb" camera-controls auto-rotate></model-viewer>
@@ -270,8 +308,15 @@
         </div>
         <div class="window-content">
           <p>Fake description: Interactive tools, shaders, and web experiments that bring motion to the screen.</p>
-          <div class="code-snippet">
-            <span>scene.render(frame).grade("dream haze").export("4k")</span>
+          <div class="code-terminal">
+            <div class="terminal-line">> boot studio_pipeline</div>
+            <div class="terminal-line">> load shader_pack: dream-haze</div>
+            <div class="terminal-line">> compile success ✓</div>
+          </div>
+          <div class="module-grid">
+            <div class="module-card">Fake module: realtime preview</div>
+            <div class="module-card">Fake module: lighting rig</div>
+            <div class="module-card">Fake module: export queue</div>
           </div>
           <div class="page-gallery">
             <model-viewer src="https://modelviewer.dev/shared-assets/models/Phone.glb" camera-controls auto-rotate></model-viewer>
@@ -286,11 +331,31 @@
         </div>
         <div class="window-content">
           <p>Fake description: Sound palettes and scoring sketches built for rhythm-driven visuals.</p>
-          <div class="mixer">
-            <div class="mixer-bar" style="height: 65%;"></div>
-            <div class="mixer-bar" style="height: 80%;"></div>
-            <div class="mixer-bar" style="height: 45%;"></div>
-            <div class="mixer-bar" style="height: 70%;"></div>
+          <div class="music-console">
+            <div class="track-list">
+              <div class="track">
+                <span class="track-name">Fake track: Neon Pulse</span>
+                <span class="track-time">02:41</span>
+              </div>
+              <div class="track">
+                <span class="track-name">Fake track: Glass Echo</span>
+                <span class="track-time">03:12</span>
+              </div>
+              <div class="track">
+                <span class="track-name">Fake track: City Drift</span>
+                <span class="track-time">01:58</span>
+              </div>
+            </div>
+            <div class="mixer">
+              <div class="mixer-bar" style="height: 65%;"></div>
+              <div class="mixer-bar" style="height: 80%;"></div>
+              <div class="mixer-bar" style="height: 45%;"></div>
+              <div class="mixer-bar" style="height: 70%;"></div>
+            </div>
+          </div>
+          <div class="waveform">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
           </div>
           <div class="page-gallery">
             <model-viewer src="https://modelviewer.dev/shared-assets/models/Boombox.glb" camera-controls auto-rotate></model-viewer>
@@ -305,6 +370,20 @@
         </div>
         <div class="window-content">
           <p>Fake description: Send a note, pitch a project, or request a reel.</p>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">hello@puji.studio</div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">Studio</div>
+              <div class="contact-value">Fake description: Downtown lab</div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">Social</div>
+              <div class="contact-value">@pujiworld</div>
+            </div>
+          </div>
           <form class="contact-form">
             <input class="text-input" type="text" placeholder="Name">
             <input class="text-input" type="email" placeholder="Email">
@@ -324,11 +403,20 @@
         </div>
         <div class="window-content">
           <p>Fake description: Notes on visual storytelling, pipeline tips, and process breakdowns.</p>
-          <ul class="writing-list">
-            <li>Fake post: Building a retro-future title sequence</li>
-            <li>Fake post: Editing rhythm for short-form campaigns</li>
-            <li>Fake post: Designing a 3D world from one sound</li>
-          </ul>
+          <div class="writing-zine">
+            <div class="zine-card">
+              <span class="zine-issue">Issue 01</span>
+              <span class="zine-title">Fake post: Building a retro-future title sequence</span>
+            </div>
+            <div class="zine-card">
+              <span class="zine-issue">Issue 02</span>
+              <span class="zine-title">Fake post: Editing rhythm for short-form campaigns</span>
+            </div>
+            <div class="zine-card">
+              <span class="zine-issue">Issue 03</span>
+              <span class="zine-title">Fake post: Designing a 3D world from one sound</span>
+            </div>
+          </div>
           <div class="page-gallery">
             <model-viewer src="https://modelviewer.dev/shared-assets/models/AntiqueCamera.glb" camera-controls auto-rotate></model-viewer>
             <model-viewer src="https://modelviewer.dev/shared-assets/models/MaterialsVariantsShoe.glb" camera-controls auto-rotate></model-viewer>
@@ -342,6 +430,20 @@
         </div>
         <div class="window-content">
           <p>Fake description: Help fuel personal films, open-source tools, and community workshops.</p>
+          <div class="donate-tiers">
+            <div class="tier-card">
+              <span class="tier-name">Spark</span>
+              <span class="tier-amount">$5</span>
+            </div>
+            <div class="tier-card">
+              <span class="tier-name">Pulse</span>
+              <span class="tier-amount">$25</span>
+            </div>
+            <div class="tier-card">
+              <span class="tier-name">Radiant</span>
+              <span class="tier-amount">$100</span>
+            </div>
+          </div>
           <button class="btn">Support the Studio</button>
           <div class="page-gallery">
             <model-viewer src="https://modelviewer.dev/shared-assets/models/ShoppingCart.glb" camera-controls auto-rotate></model-viewer>
