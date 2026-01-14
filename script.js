@@ -46,35 +46,5 @@ if (muteBtn) {
   });
 }
 
-// --- Dynamic Theme Switching on Scroll ---
-const sectionThemes = {
-  about: "8bit",
-  artwork: "8bit",
-  fashion: "sunset",
-  code: "forest",
-  music: "ocean",
-  contact: "ocean",
-  writing: "royal",
-  donate: "royal"
-};
-
-const observerOptions = {
-  root: null,
-  threshold: 0.6 // Trigger when 60% of section is visible
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const sectionId = entry.target.id;
-      const theme = sectionThemes[sectionId];
-      if (theme) {
-        applyTheme(theme, body.dataset.mode || "light");
-      }
-    }
-  });
-}, observerOptions);
-
-document.querySelectorAll("section.panel").forEach(section => {
-  observer.observe(section);
-});
+// Removed scroll-based theme switching as requested.
+// Each section will maintain its own distinct CSS-based styling.
