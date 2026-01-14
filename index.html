@@ -1,7 +1,25 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>3D Model Viewer</title>
+    <meta charset="utf-8">
+    <meta name="description" content="3D model viewer example">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="box">
+      <div class="copy">
+        <p>TEXT</p>
+      </div>
+      <model-viewer
+        src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+        alt="A 3D model of an astronaut"
+        ar
+        auto-rotate
+        camera-controls>
+      </model-viewer>
+    </div>
+  </body>
 </html>

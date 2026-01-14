@@ -1,0 +1,13 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px;
+}
+
+model-viewer {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+}
