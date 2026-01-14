@@ -273,108 +273,197 @@
         </div>
       </section>
 
+      <!-- Fashion -->
       <section id="fashion" class="panel window depth">
         <div class="title-bar">
           <div class="close-box"><div class="close-box-lines"></div></div>
           <span class="title-text">Fashion / AWGE</span>
           <div class="close-box hidden"></div>
         </div>
-        <div class="window-content">
-          <p>Fake description: Digital fittings, fabric tests, and runway-ready motion studies for bold silhouettes.</p>
-          <div class="fashion-lookbook">
-            <div class="look-card">
-              <div class="look-label">Look 01</div>
-              <div class="look-desc">Fake description: Chrome pleats + Neon lining.</div>
+        <div class="window-content camcorder-ui">
+          <div class="cam-overlay">
+            <div class="cam-top">
+              <span class="rec-dot">● REC</span>
+              <span class="timecode">00:04:20:18</span>
+              <span class="battery">[||||]</span>
             </div>
-            <div class="look-card">
-              <div class="look-label">Look 02</div>
-              <div class="look-desc">Fake description: Utility vest with soft glow.</div>
-            </div>
-            <div class="look-card">
-              <div class="look-label">Look 03</div>
-              <div class="look-desc">Fake description: Liquid satin + glass trims.</div>
+            <div class="cam-crosshair"></div>
+            <div class="cam-bottom">
+              <span>ISO 800</span>
+              <span>F/2.8</span>
+              <span>1/50</span>
             </div>
           </div>
-          <div class="fabric-swatches">
-            <span>Swatches</span>
-            <div class="swatch-row">
-              <div class="swatch"></div>
-              <div class="swatch"></div>
-              <div class="swatch"></div>
-              <div class="swatch"></div>
+          
+          <div class="fashion-grid">
+            <div class="spec-sheet">
+              <h3>COLLECTION: VOL_01</h3>
+              <table class="spec-table">
+                <tr>
+                  <td>ITEM</td>
+                  <td>MATERIAL</td>
+                  <td>STATUS</td>
+                </tr>
+                <tr>
+                  <td>Utility Vest</td>
+                  <td>Ballistic Nylon</td>
+                  <td>PROTOTYPE</td>
+                </tr>
+                <tr>
+                  <td>Cargo Pant</td>
+                  <td>Waxed Cotton</td>
+                  <td>PRODUCTION</td>
+                </tr>
+                <tr>
+                  <td>Sneaker</td>
+                  <td>Chrome/Rubber</td>
+                  <td>RENDERING</td>
+                </tr>
+              </table>
+              <div class="barcode">
+                || | ||| | || ||| || || |
+              </div>
             </div>
-          </div>
-          <div class="page-gallery">
-            <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+
+            <div class="fashion-gallery-container">
+               <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" camera-controls auto-rotate shadow-intensity="1" ar></model-viewer>
+               <div class="model-label">FIG A.1 // SUIT_STUDY</div>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- Code -->
       <section id="code" class="panel window depth">
         <div class="title-bar">
           <div class="close-box"><div class="close-box-lines"></div></div>
           <span class="title-text">Code / Glitch</span>
           <div class="close-box hidden"></div>
         </div>
-        <div class="window-content">
-          <p>Fake description: Interactive tools, shaders, and web experiments that bring motion to the screen.</p>
-          <div class="code-terminal">
-            <div class="terminal-line">> boot studio_pipeline</div>
-            <div class="terminal-line">> load shader_pack: dream-haze</div>
-            <div class="terminal-line">> compile success ✓</div>
+        <div class="window-content hacker-ui">
+          <div class="ide-layout">
+            <div class="sidebar-tree">
+              <div class="tree-root">/root/studio</div>
+              <ul class="tree-list">
+                <li><span class="icon">📁</span> src</li>
+                <li>
+                  <span class="icon">📂</span> components
+                  <ul>
+                     <li><span class="icon">📄</span> World.js</li>
+                     <li><span class="icon">📄</span> Player.ts</li>
+                     <li class="active"><span class="icon">📄</span> Glitch.glsl</li>
+                  </ul>
+                </li>
+                <li><span class="icon">📄</span> package.json</li>
+              </ul>
+            </div>
+            
+            <div class="editor-area">
+              <div class="tab-bar">
+                <div class="tab active">Glitch.glsl</div>
+                <div class="tab">World.js</div>
+              </div>
+              <div class="code-view">
+                <div class="line-numbers">
+                  1<br>2<br>3<br>4<br>5<br>6<br>7<br>8
+                </div>
+                <pre><code><span class="keyword">void</span> main() {
+  vec2 uv = gl_FragCoord.xy / resolution.xy;
+  <span class="comment">// Datamosh effect</span>
+  float time = u_time * <span class="number">0.5</span>;
+  vec3 color = texture2D(u_texture, uv).rgb;
+  
+  <span class="keyword">if</span> (uv.y > sin(time)) {
+    color.r = <span class="number">0.0</span>; <span class="comment">// glitch red</span>
+  }
+  
+  gl_FragColor = vec4(color, <span class="number">1.0</span>);
+}</code></pre>
+              </div>
+              <div class="terminal-log">
+                 <div>> building modules...</div>
+                 <div class="success">> build success (420ms)</div>
+                 <div class="cursor-blink">_</div>
+              </div>
+            </div>
           </div>
-          <div class="module-grid">
-            <div class="module-card">Fake module: realtime preview</div>
-            <div class="module-card">Fake module: lighting rig</div>
-            <div class="module-card">Fake module: export queue</div>
-          </div>
-          <div class="page-gallery">
-            <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+          
+          <div class="system-monitor">
+             <div class="monitor-block">
+               <label>CPU</label>
+               <div class="bar-graph"><div class="fill" style="width: 45%"></div></div>
+             </div>
+             <div class="monitor-block">
+               <label>MEM</label>
+               <div class="bar-graph"><div class="fill" style="width: 82%"></div></div>
+             </div>
+             <div class="page-gallery-mini">
+                 <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+             </div>
           </div>
         </div>
       </section>
 
+      <!-- Music -->
       <section id="music" class="panel window depth">
         <div class="title-bar">
           <div class="close-box"><div class="close-box-lines"></div></div>
           <span class="title-text">Music / Yo MTV</span>
           <div class="close-box hidden"></div>
         </div>
-        <div class="window-content">
-          <p>Fake description: Sound palettes and scoring sketches built for rhythm-driven visuals.</p>
-          <div class="music-console">
-            <div class="track-list">
-              <div class="track">
-                <span class="track-name">Fake Track: Neon Pulse</span>
-                <span class="track-time">02:41</span>
-              </div>
-              <div class="track">
-                <span class="track-name">Fake Track: Glass Echo</span>
-                <span class="track-time">03:12</span>
-              </div>
-              <div class="track">
-                <span class="track-name">Fake Track: City Drift</span>
-                <span class="track-time">01:58</span>
-              </div>
+        <div class="window-content mpc-ui">
+          <div class="display-screen">
+            <div class="screen-header">
+               <span>SAMPLER_MODE</span>
+               <span>BPM: 94.0</span>
             </div>
-            <div class="waveform">
-              <span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span>
+            <div class="track-info-large">
+               <marquee scrollamount="4">NOW PLAYING: NEON_PULSE_V2.MP3 /// PROD. BY PUJI /// </marquee>
             </div>
-            <div class="mixer">
-                <div class="mixer-bar" style="height: 65%;"></div>
-                <div class="mixer-bar" style="height: 80%;"></div>
-                <div class="mixer-bar" style="height: 45%;"></div>
-                <div class="mixer-bar" style="height: 70%;"></div>
-            </div>
-            <div class="transport">
-              <button class="btn" type="button">Play</button>
-              <button class="btn" type="button">Stop</button>
-              <button class="btn" type="button">Rec</button>
+            <div class="waveform-viz">
+               <div class="bar" style="height: 40%"></div>
+               <div class="bar" style="height: 80%"></div>
+               <div class="bar" style="height: 60%"></div>
+               <div class="bar" style="height: 90%"></div>
+               <div class="bar" style="height: 30%"></div>
+               <div class="bar" style="height: 70%"></div>
+               <div class="bar" style="height: 50%"></div>
             </div>
           </div>
-          <div class="page-gallery">
-            <model-viewer src="https://modelviewer.dev/shared-assets/models/Horse.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+          
+          <div class="controls-area">
+             <div class="pad-grid">
+               <button class="mpc-pad">KICK</button>
+               <button class="mpc-pad">SNARE</button>
+               <button class="mpc-pad">HAT</button>
+               <button class="mpc-pad active">VOX</button>
+               <button class="mpc-pad">808</button>
+               <button class="mpc-pad">PERC</button>
+               <button class="mpc-pad">FX</button>
+               <button class="mpc-pad">STAB</button>
+             </div>
+             
+             <div class="faders">
+               <div class="fader-group">
+                 <label>VOL</label>
+                 <input type="range" orient="vertical" min="0" max="100" value="80">
+               </div>
+               <div class="fader-group">
+                 <label>PITCH</label>
+                 <input type="range" orient="vertical" min="0" max="100" value="50">
+               </div>
+             </div>
+          </div>
+
+          <div class="transport-big">
+            <button class="trans-btn play">▶ PLAY</button>
+            <button class="trans-btn stop">■ STOP</button>
+            <button class="trans-btn rec">● REC</button>
+          </div>
+          
+          <div class="page-gallery-hidden">
+             <!-- 3D model hidden but available for context if needed -->
+             <model-viewer src="https://modelviewer.dev/shared-assets/models/Horse.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
           </div>
         </div>
       </section>
@@ -451,23 +540,53 @@
           <span class="title-text">Donate / Pen & Pixel</span>
           <div class="close-box hidden"></div>
         </div>
-        <div class="window-content">
-          <p>Fake description: Support the studio experiments and open-source tools.</p>
-          <div class="donate-tiers">
-            <div class="tier-card">
-              <span class="tier-name">Coffee</span>
-              <span class="tier-amount">$5</span>
-            </div>
-            <div class="tier-card">
-              <span class="tier-name">Pizza</span>
-              <span class="tier-amount">$15</span>
-            </div>
-            <div class="tier-card">
-              <span class="tier-name">Server</span>
-              <span class="tier-amount">$50</span>
-            </div>
+        <div class="window-content receipt-ui">
+          <div class="receipt-header">
+            <div class="bling-logo">$$$ PUJI STUDIO $$$</div>
+            <div class="receipt-date">01/14/2026 11:11 PM</div>
+            <div class="receipt-id">TXN #8888-GOLD</div>
           </div>
-          <button class="btn">Donate Now</button>
+          
+          <div class="receipt-items">
+             <div class="receipt-row header">
+               <span>ITEM</span>
+               <span>QTY</span>
+               <span>PRICE</span>
+             </div>
+             <div class="receipt-divider">================================</div>
+             <div class="receipt-row">
+               <span>COFFEE_REFILL</span>
+               <span>01</span>
+               <span>$5.00</span>
+             </div>
+             <div class="receipt-row">
+               <span>SERVER_COSTS</span>
+               <span>01</span>
+               <span>$15.00</span>
+             </div>
+             <div class="receipt-row highlight">
+               <span>GPU_FUND</span>
+               <span>01</span>
+               <span>$50.00</span>
+             </div>
+             <div class="receipt-divider">================================</div>
+             <div class="receipt-row total">
+               <span>TOTAL</span>
+               <span>$70.00</span>
+             </div>
+          </div>
+          
+          <div class="payment-method">
+             <span>PAYMENT METHOD:</span>
+             <div class="card-icons">
+               <div class="card-icon">VISA</div>
+               <div class="card-icon">AMEX</div>
+               <div class="card-icon">BITCOIN</div>
+             </div>
+          </div>
+
+          <button class="btn bling-btn">CONFIRM PAYMENT</button>
+          
           <div class="page-gallery">
             <model-viewer src="https://modelviewer.dev/shared-assets/models/Canoe.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
           </div>
