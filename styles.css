@@ -484,16 +484,16 @@ a {
 }
 
 #fashion .window-content {
-  background: #fffef5;
-  color: #262626;
+  background: #fff3e0;
+  color: #e65100;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.75px;
 }
 
 #fashion .title-bar,
 #fashion .title-text {
-  background: #262626;
-  color: #fffef5;
+  background: #3e2723;
+  color: #fff3e0;
 }
 
 .fashion-lookbook {
@@ -505,7 +505,7 @@ a {
 
 .look-card {
   padding: 10px;
-  border: 1px solid #262626;
+  border: 1px solid #3e2723;
   background: #fff;
   text-transform: uppercase;
   font-size: 10px;
@@ -517,10 +517,11 @@ a {
   font-weight: bold;
   margin-bottom: 6px;
   font-size: 12px;
+  color: #f57c00;
 }
 
 .look-desc {
-  color: #666;
+  color: #ff6f00;
   font-size: 9px;
   letter-spacing: 0.5px;
 }
@@ -622,16 +623,16 @@ a {
 }
 
 #music .window-content {
-  background: #1a1a1a;
-  color: #00ff9d;
+  background: #e0f7fa;
+  color: #01579b;
   font-family: "Courier New", monospace;
 }
 
 #music .title-bar,
 #music .title-text {
-  background: #1a1a1a;
-  color: #00ff9d;
-  border-bottom-color: #00ff9d;
+  background: #263238;
+  color: #e0f7fa;
+  border-bottom-color: #263238;
 }
 
 .music-console {
@@ -644,11 +645,11 @@ a {
   display: grid;
   gap: 6px;
   padding: 8px;
-  border: 1px solid #00ff9d;
-  background: #000;
+  border: 1px solid #0277bd;
+  background: #00acc1;
   font-size: 10px;
   text-transform: uppercase;
-  color: #00ff9d;
+  color: #e0f7fa;
 }
 
 .track {
@@ -666,10 +667,10 @@ a {
 
 .transport .btn {
   font-size: 10px;
-  background: #000;
-  color: #00ff9d;
-  border: 1px solid #00ff9d;
-  box-shadow: 2px 2px 0 #004d30;
+  background: #0277bd;
+  color: #e0f7fa;
+  border: 1px solid #01579b;
+  box-shadow: 2px 2px 0 #01579b;
 }
 
 .transport .btn:active {
@@ -687,7 +688,7 @@ a {
 
 .waveform span {
   flex: 1;
-  background: #00ff9d;
+  background: #0277bd;
   height: 50%;
   animation: wave 1.4s ease-in-out infinite;
 }
@@ -706,12 +707,12 @@ a {
   flex: 1;
   background: repeating-linear-gradient(
     0deg,
-    #00ff9d,
-    #00ff9d 2px,
-    #000 2px,
-    #000 4px
+    #0277bd,
+    #0277bd 2px,
+    #e0f7fa 2px,
+    #e0f7fa 4px
   );
-  border: 1px solid #00ff9d;
+  border: 1px solid #01579b;
 }
 
 .contact-form {
@@ -754,15 +755,16 @@ a {
 }
 
 #writing .window-content {
-  background: #000;
-  color: #fff;
+  background: #f3e5f5;
+  color: #4a148c;
   font-family: "Times New Roman", Times, serif;
 }
 
 #writing .title-bar,
 #writing .title-text {
-  background: #000;
-  color: #0000ee;
+  background: #263238;
+  color: #f3e5f5;
+  border-bottom-color: #263238;
 }
 
 .writing-zine {
@@ -772,20 +774,20 @@ a {
 }
 
 .zine-card {
-  border: 1px solid #0000ee;
+  border: 1px solid #7b1fa2;
   padding: 8px;
   font-size: 14px;
   text-transform: none;
   display: grid;
   gap: 6px;
-  color: #0000ee;
-  background: #000;
+  color: #4a148c;
+  background: #fff;
 }
 
 .zine-issue {
   font-weight: bold;
   letter-spacing: normal;
-  color: #fff;
+  color: #6a1b9a;
 }
 
 .writing-links {
@@ -797,7 +799,7 @@ a {
 }
 
 .writing-links a {
-  color: #0000ee;
+  color: #7b1fa2;
   text-decoration: underline;
 }
 
