@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Portfolio for a video editor and 3D designer.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
   <body data-theme="8bit" data-mode="light">
@@ -19,6 +20,7 @@
       <nav class="site-nav">
         <a href="#about">About</a>
         <a href="#artwork">Artwork</a>
+        <a href="#fashion">Fashion</a>
         <a href="#code">Code</a>
         <a href="#music">Music</a>
         <a href="#contact">Contact</a>
@@ -224,6 +226,10 @@
         </div>
         <div class="window-content">
           <p>Fake description: My work blends cinematic pacing with stylized 3D worlds and an analog UI aesthetic.</p>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" camera-controls auto-rotate></model-viewer>
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/DamagedHelmet.glb" camera-controls auto-rotate></model-viewer>
+          </div>
         </div>
       </section>
 
@@ -238,6 +244,23 @@
             <div class="card">Fake artwork: liquid chrome portrait</div>
             <div class="card">Fake artwork: retro title sequence</div>
           </div>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" camera-controls auto-rotate></model-viewer>
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/FlightHelmet.glb" camera-controls auto-rotate></model-viewer>
+          </div>
+        </div>
+      </section>
+
+      <section id="fashion" class="panel window depth">
+        <div class="title-bar">
+          <span class="title-text">* Fashion *</span>
+        </div>
+        <div class="window-content">
+          <p>Fake description: Digital fittings, fabric tests, and runway-ready motion studies for bold silhouettes.</p>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" camera-controls auto-rotate></model-viewer>
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/Car.glb" camera-controls auto-rotate></model-viewer>
+          </div>
         </div>
       </section>
 
@@ -249,6 +272,10 @@
           <p>Fake description: Interactive tools, shaders, and web experiments that bring motion to the screen.</p>
           <div class="code-snippet">
             <span>scene.render(frame).grade("dream haze").export("4k")</span>
+          </div>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/Phone.glb" camera-controls auto-rotate></model-viewer>
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/SheenChair.glb" camera-controls auto-rotate></model-viewer>
           </div>
         </div>
       </section>
@@ -265,6 +292,10 @@
             <div class="mixer-bar" style="height: 45%;"></div>
             <div class="mixer-bar" style="height: 70%;"></div>
           </div>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/Boombox.glb" camera-controls auto-rotate></model-viewer>
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/TextureCoordinateTest.glb" camera-controls auto-rotate></model-viewer>
+          </div>
         </div>
       </section>
 
@@ -280,6 +311,10 @@
             <textarea class="text-input" rows="4" placeholder="Message"></textarea>
             <button class="btn" type="button">Send</button>
           </form>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" camera-controls auto-rotate></model-viewer>
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" camera-controls auto-rotate></model-viewer>
+          </div>
         </div>
       </section>
 
@@ -294,6 +329,10 @@
             <li>Fake post: Editing rhythm for short-form campaigns</li>
             <li>Fake post: Designing a 3D world from one sound</li>
           </ul>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/AntiqueCamera.glb" camera-controls auto-rotate></model-viewer>
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/MaterialsVariantsShoe.glb" camera-controls auto-rotate></model-viewer>
+          </div>
         </div>
       </section>
 
@@ -304,6 +343,10 @@
         <div class="window-content">
           <p>Fake description: Help fuel personal films, open-source tools, and community workshops.</p>
           <button class="btn">Support the Studio</button>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/ShoppingCart.glb" camera-controls auto-rotate></model-viewer>
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/Bench.glb" camera-controls auto-rotate></model-viewer>
+          </div>
         </div>
       </section>
     </main>
