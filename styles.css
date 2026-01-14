@@ -670,30 +670,35 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   background: #0d0d0d;
   color: #00ff00;
   font-family: "Consolas", "Monaco", monospace;
-  display: grid;
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   overflow: hidden;
+  height: 600px; /* Force height to match 'Whole Page' feel */
 }
 
 #code .ide-layout {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  height: 300px;
+  grid-template-columns: 180px 1fr;
+  flex: 1;
   border-bottom: 1px solid #00ff00;
+  min-height: 0;
 }
 
 #code .sidebar-tree {
   background: #050505;
   border-right: 1px solid #00ff00;
-  padding: 8px;
-  font-size: 10px;
+  padding: 12px;
+  font-size: 12px;
+  overflow-y: auto;
 }
 
 #code .tree-root {
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   color: #fff;
+  border-bottom: 1px dashed #333;
+  padding-bottom: 4px;
 }
 
 #code .tree-list {
@@ -703,25 +708,34 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
 }
 
 #code .tree-list li {
-  margin-bottom: 4px;
-  padding-left: 8px;
+  margin-bottom: 6px;
+  padding-left: 12px;
   cursor: pointer;
+  position: relative;
 }
 
-#code .tree-list li.active {
-  background: rgba(0, 255, 0, 0.2);
+#code .tree-list li:hover {
   color: #fff;
 }
 
-#code .tree-list ul {
-  list-style: none;
-  padding-left: 12px;
+#code .tree-list li.active {
+  background: rgba(0, 255, 0, 0.1);
+  color: #fff;
+  font-weight: bold;
+}
+
+#code .tree-list li.active::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: #00ff00;
 }
 
 #code .editor-area {
   display: flex;
   flex-direction: column;
   background: #111;
+  position: relative;
 }
 
 #code .tab-bar {
@@ -731,8 +745,8 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
 }
 
 #code .tab {
-  padding: 4px 12px;
-  font-size: 10px;
+  padding: 6px 16px;
+  font-size: 11px;
   border-right: 1px solid #333;
   color: #666;
   cursor: pointer;
@@ -747,24 +761,27 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
 #code .code-view {
   flex: 1;
   display: flex;
-  padding: 8px;
-  font-size: 11px;
-  line-height: 1.4;
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.5;
   overflow-y: auto;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #111 100%);
 }
 
 #code .line-numbers {
   color: #444;
-  padding-right: 12px;
+  padding-right: 16px;
   border-right: 1px solid #333;
-  margin-right: 12px;
+  margin-right: 16px;
   text-align: right;
   user-select: none;
+  font-family: inherit;
 }
 
 #code pre {
   margin: 0;
   color: #ddd;
+  font-family: inherit;
 }
 
 #code .keyword { color: #ff79c6; }
@@ -772,23 +789,23 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
 #code .number { color: #bd93f9; }
 
 #code .terminal-log {
-  height: 80px;
+  height: 120px;
   background: #000;
   border-top: 1px solid #00ff00;
-  padding: 8px;
-  font-size: 10px;
+  padding: 12px;
+  font-size: 11px;
   color: #aaa;
+  overflow-y: auto;
 }
-
-#code .success { color: #50fa7b; }
-#code .cursor-blink { animation: blink 1s step-end infinite; display: inline-block; }
 
 #code .system-monitor {
   display: flex;
-  gap: 16px;
-  padding: 12px;
+  gap: 24px;
+  padding: 8px 16px;
   background: #000;
   align-items: center;
+  border-top: 1px solid #333;
+  height: 40px;
 }
 
 #code .monitor-block {
@@ -797,176 +814,26 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   gap: 8px;
   font-size: 10px;
   color: #00ff00;
+  width: 150px;
 }
 
 #code .bar-graph {
-  width: 60px;
-  height: 8px;
+  flex: 1;
+  height: 10px;
   background: #222;
   border: 1px solid #00ff00;
+  position: relative;
 }
 
 #code .bar-graph .fill {
   height: 100%;
-  background: #00ff00;
-  box-shadow: 0 0 5px #00ff00;
-}
-
-#code .page-gallery-mini {
-  width: 60px;
-  height: 60px;
-  margin-left: auto;
-  border: 1px solid #00ff00;
-}
-
-#code .page-gallery-mini model-viewer {
-  width: 100%;
-  height: 100%;
-}
-
-
-/* --- Donate (Pen & Pixel / Bling) --- */
-#donate .window,
-#donate .window-content,
-#donate .title-bar,
-#donate .title-text,
-#donate .tier-card,
-#donate .donate-progress,
-#donate .page-gallery model-viewer {
-  --section-bg: #1a0033;
-  --section-text: #ffd700; /* Gold */
-  --section-border: #ffd700;
-  --section-accent: #c0c0c0; /* Silver */
-}
-
-#donate .window-content.receipt-ui {
-  background: #fff;
-  color: #000;
-  font-family: "Courier New", monospace;
-  padding: 24px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  position: relative;
-  background-image: 
-    radial-gradient(#ddd 1px, transparent 1px);
-  background-size: 10px 10px;
-}
-
-#donate .window-content.receipt-ui::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: radial-gradient(circle, transparent 4px, #fff 5px) 0 0/10px 10px;
-  transform: rotate(180deg);
-}
-
-#donate .window-content.receipt-ui::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: radial-gradient(circle, transparent 4px, #fff 5px) 0 0/10px 10px;
-}
-
-#donate .receipt-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#donate .bling-logo {
-  font-size: 20px;
-  font-weight: 900;
-  background: linear-gradient(45deg, #d4af37, #f9f295, #d4af37, #b8860b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(1px 1px 0 #000);
-  margin-bottom: 8px;
-}
-
-#donate .receipt-date, #donate .receipt-id {
-  font-size: 10px;
-  color: #666;
-}
-
-#donate .receipt-items {
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-
-#donate .receipt-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px 0;
-}
-
-#donate .receipt-row.header {
-  font-weight: bold;
-}
-
-#donate .receipt-row.highlight {
-  background: #ffff00;
-  font-weight: bold;
-}
-
-#donate .receipt-row.total {
-  font-size: 16px;
-  font-weight: 900;
-  border-top: 2px dashed #000;
-  padding-top: 8px;
-  margin-top: 8px;
-}
-
-#donate .receipt-divider {
-  overflow: hidden;
-  white-space: nowrap;
-  color: #ccc;
-  font-size: 10px;
-  margin: 4px 0;
-}
-
-#donate .payment-method {
-  text-align: center;
-  font-size: 10px;
-  margin-bottom: 16px;
-}
-
-#donate .card-icons {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 4px;
-}
-
-#donate .card-icon {
-  border: 1px solid #000;
-  padding: 2px 4px;
-  font-weight: bold;
-}
-
-#donate .bling-btn {
-  width: 100%;
-  background: linear-gradient(180deg, #ffd700, #b8860b);
-  border: 2px solid #000;
-  color: #000;
-  font-weight: 900;
-  font-size: 16px;
-  padding: 12px;
-  text-shadow: 1px 1px 0 #fff;
-  cursor: pointer;
-}
-
-#donate .bling-btn:hover {
-  filter: brightness(1.2);
-}
-
-#donate .page-gallery {
-  margin-top: 24px;
-  border: 2px solid #000;
-  background: #eee;
+  background: repeating-linear-gradient(
+    90deg,
+    #00ff00,
+    #00ff00 2px,
+    transparent 2px,
+    transparent 4px
+  );
 }
 
 /* --- Fashion (AWGE / 90s VHS / Lo-Fi) --- */
@@ -988,6 +855,7 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   color: #fff;
   font-family: "Courier New", monospace;
   overflow: hidden;
+  height: 600px;
 }
 
 #fashion .cam-overlay {
@@ -998,17 +866,20 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   height: 100%;
   pointer-events: none;
   z-index: 10;
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
 }
 
 #fashion .cam-top {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
-  text-shadow: 1px 1px 2px #000;
+  font-size: 16px;
+  text-shadow: 2px 2px 0 #000;
+  letter-spacing: 1px;
 }
 
 #fashion .rec-dot {
@@ -1017,9 +888,8 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
 }
 
 #fashion .cam-crosshair {
-  width: 20px;
-  height: 20px;
-  border: 1px solid rgba(255,255,255,0.5);
+  width: 40px;
+  height: 40px;
   align-self: center;
   position: relative;
 }
@@ -1027,80 +897,130 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
 #fashion .cam-crosshair::after, #fashion .cam-crosshair::before {
   content: "";
   position: absolute;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 4px #000;
 }
 
-#fashion .cam-crosshair::after { top: 9px; left: -10px; width: 40px; height: 1px; }
-#fashion .cam-crosshair::before { left: 9px; top: -10px; height: 40px; width: 1px; }
+#fashion .cam-crosshair::after { top: 19px; left: -20px; width: 80px; height: 2px; }
+#fashion .cam-crosshair::before { left: 19px; top: -20px; height: 80px; width: 2px; }
 
 #fashion .cam-bottom {
   display: flex;
-  gap: 20px;
-  font-size: 12px;
-  text-shadow: 1px 1px 2px #000;
+  gap: 24px;
+  font-size: 14px;
+  text-shadow: 2px 2px 0 #000;
 }
 
 #fashion .fashion-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 400px;
+  grid-template-columns: 350px 1fr;
+  height: 100%;
 }
 
 #fashion .spec-sheet {
-  background: #fff;
+  background: rgba(255,255,255,0.95);
   color: #000;
-  padding: 24px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  overflow-y: auto;
+  border-right: 2px solid #000;
 }
 
 #fashion .spec-sheet h3 {
-  font-size: 18px;
+  font-size: 16px;
   border-bottom: 4px solid #000;
   padding-bottom: 8px;
   margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-#fashion .spec-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 10px;
+#fashion .inventory-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
   margin-bottom: 24px;
 }
 
-#fashion .spec-table td {
-  border: 1px solid #000;
-  padding: 8px;
+#fashion .inv-item {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  font-size: 11px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
 }
 
+#fashion .inv-id {
+  font-weight: bold;
+  color: #666;
+}
+
+#fashion .inv-name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#fashion .inv-status {
+  font-size: 9px;
+  padding: 2px 4px;
+  background: #000;
+  color: #fff;
+}
+
+#fashion .inv-status:contains("SOLD") { background: red; } /* Note: :contains is not valid CSS selector, just concept */
+
 #fashion .barcode {
-  font-family: "Libre Barcode 39", cursive; /* Fallback to blocky font */
-  font-size: 32px;
+  font-family: "Libre Barcode 39", cursive;
+  font-size: 42px;
   letter-spacing: 4px;
   overflow: hidden;
   white-space: nowrap;
+  margin-top: auto;
+  opacity: 0.8;
 }
 
 #fashion .fashion-gallery-container {
   background: #ccc;
   position: relative;
+  overflow: hidden;
 }
 
 #fashion .fashion-gallery-container model-viewer {
   width: 100%;
   height: 100%;
-  background: radial-gradient(#999, #666);
+  background: radial-gradient(circle, #b0b0b0, #666);
+  /* Simulate grainy footage */
+  filter: contrast(1.1) brightness(0.9) grayscale(0.2);
+}
+
+#fashion .fashion-gallery-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 5;
 }
 
 #fashion .model-label {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 80px;
+  right: 24px;
   background: #000;
   color: #fff;
-  padding: 4px 8px;
-  font-size: 10px;
+  padding: 4px 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  z-index: 6;
 }
 
 .site-footer {

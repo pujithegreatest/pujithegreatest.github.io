@@ -297,29 +297,69 @@
           
           <div class="fashion-grid">
             <div class="spec-sheet">
-              <h3>COLLECTION: VOL_01</h3>
-              <table class="spec-table">
-                <tr>
-                  <td>ITEM</td>
-                  <td>MATERIAL</td>
-                  <td>STATUS</td>
-                </tr>
-                <tr>
-                  <td>Utility Vest</td>
-                  <td>Ballistic Nylon</td>
-                  <td>PROTOTYPE</td>
-                </tr>
-                <tr>
-                  <td>Cargo Pant</td>
-                  <td>Waxed Cotton</td>
-                  <td>PRODUCTION</td>
-                </tr>
-                <tr>
-                  <td>Sneaker</td>
-                  <td>Chrome/Rubber</td>
-                  <td>RENDERING</td>
-                </tr>
-              </table>
+              <h3>INVENTORY_LOG: VOL_01</h3>
+              <div class="inventory-grid">
+                <div class="inv-item">
+                  <span class="inv-id">01</span>
+                  <span class="inv-name">Utility Vest</span>
+                  <span class="inv-status">PROTO</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">02</span>
+                  <span class="inv-name">Cargo Pant</span>
+                  <span class="inv-status">STOCK</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">03</span>
+                  <span class="inv-name">Sneaker V1</span>
+                  <span class="inv-status">REND</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">04</span>
+                  <span class="inv-name">Oversized Hoodie</span>
+                  <span class="inv-status">STOCK</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">05</span>
+                  <span class="inv-name">Graphic Tee</span>
+                  <span class="inv-status">SOLD</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">06</span>
+                  <span class="inv-name">Tech Jacket</span>
+                  <span class="inv-status">PROTO</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">07</span>
+                  <span class="inv-name">Beanie</span>
+                  <span class="inv-status">STOCK</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">08</span>
+                  <span class="inv-name">Tactical Bag</span>
+                  <span class="inv-status">PROTO</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">09</span>
+                  <span class="inv-name">Denim Jkt</span>
+                  <span class="inv-status">DMG</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">10</span>
+                  <span class="inv-name">Wide Trouser</span>
+                  <span class="inv-status">STOCK</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">11</span>
+                  <span class="inv-name">Puffer Vest</span>
+                  <span class="inv-status">WIP</span>
+                </div>
+                <div class="inv-item">
+                  <span class="inv-id">12</span>
+                  <span class="inv-name">Sunglasses</span>
+                  <span class="inv-status">STOCK</span>
+                </div>
+              </div>
               <div class="barcode">
                 || | ||| | || ||| || || |
               </div>
@@ -337,10 +377,10 @@
       <section id="code" class="panel window depth">
         <div class="title-bar">
           <div class="close-box"><div class="close-box-lines"></div></div>
-          <span class="title-text">Code / Glitch</span>
+          <span class="title-text">Code // Glitch</span>
           <div class="close-box hidden"></div>
         </div>
-        <div class="window-content hacker-ui">
+        <div class="window-content hacker-ui full-height">
           <div class="ide-layout">
             <div class="sidebar-tree">
               <div class="tree-root">/root/studio</div>
@@ -365,7 +405,7 @@
               </div>
               <div class="code-view">
                 <div class="line-numbers">
-                  1<br>2<br>3<br>4<br>5<br>6<br>7<br>8
+                  1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14
                 </div>
                 <pre><code><span class="keyword">void</span> main() {
   vec2 uv = gl_FragCoord.xy / resolution.xy;
@@ -378,6 +418,11 @@
   }
   
   gl_FragColor = vec4(color, <span class="number">1.0</span>);
+}
+
+<span class="keyword">function</span> init() {
+  <span class="comment">// System boot...</span>
+  return <span class="number">true</span>;
 }</code></pre>
               </div>
               <div class="terminal-log">
@@ -396,9 +441,6 @@
              <div class="monitor-block">
                <label>MEM</label>
                <div class="bar-graph"><div class="fill" style="width: 82%"></div></div>
-             </div>
-             <div class="page-gallery-mini">
-                 <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
              </div>
           </div>
         </div>
