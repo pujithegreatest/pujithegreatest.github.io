@@ -1,25 +1,342 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>3D Model Viewer</title>
+    <title>Puji — Visual & 3D Studio</title>
     <meta charset="utf-8">
-    <meta name="description" content="3D model viewer example">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta name="description" content="Portfolio for a video editor and 3D designer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
   </head>
-  <body>
-    <div class="box">
-      <div class="copy">
-        <p>TEXT</p>
+  <body data-theme="8bit" data-mode="light">
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">PUJI</div>
+        <div class="brand-tag">video editor / 3d designer / world builder</div>
       </div>
-      <model-viewer
-        src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-        alt="A 3D model of an astronaut"
-        ar
-        auto-rotate
-        camera-controls>
-      </model-viewer>
+
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#artwork">Artwork</a>
+        <a href="#code">Code</a>
+        <a href="#music">Music</a>
+        <a href="#contact">Contact</a>
+        <a href="#writing">Writing</a>
+        <a href="#donate">Donate</a>
+      </nav>
+
+      <div class="theme-controls window depth">
+        <label class="control">
+          <span>Theme</span>
+          <select id="themeSelect">
+            <option value="8bit">8-Bit Classic</option>
+            <option value="ocean">Ocean Blue</option>
+            <option value="sunset">Sunset Orange</option>
+            <option value="forest">Forest Green</option>
+            <option value="royal">Royal Purple</option>
+          </select>
+        </label>
+        <label class="control toggle">
+          <input type="checkbox" id="modeToggle">
+          <span>Dark mode</span>
+        </label>
+        <button type="button" id="randomizeTheme" class="btn">Shuffle</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy window depth">
+        <div class="title-bar">
+          <span class="title-text">* Welcome *</span>
+        </div>
+        <div class="window-content">
+          <div class="eyebrow">Visual + 3D studio</div>
+          <h1>Frames, shapes, and sound — designed in 3D.</h1>
+          <p>
+            Fake description: I craft cinematic edits, stylized 3D scenes, and
+            immersive story worlds that fuse music, motion, and pixel-era UI.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#artwork">View Artwork</a>
+            <a class="btn ghost" href="#contact">Start a Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-widgets">
+        <div class="mac-window depth">
+          <div class="title-bar">
+            <div class="close-box"></div>
+            <span class="title-text">* Main Tasks *</span>
+            <div class="close-box hidden"></div>
+          </div>
+          <div class="window-content">
+            <div class="header-section">
+              <div class="header-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 4H18C19.1 4 20 4.9 20 6V20C20 21.1 19.1 22 18 22H6C4.9 22 4 21.1 4 20V6C4 4.9 4.9 4 6 4H8M9 2H15C15.55 2 16 2.45 16 3V5C16 5.55 15.55 6 15 6H9C8.45 6 8 5.55 8 5V3C8 2.45 8.45 2 9 2M9 14L11 16L15 12M9 9H15"/>
+                </svg>
+              </div>
+              <div class="header-info">
+                <div class="header-title">Today's Tasks</div>
+                <div class="header-subtitle">Fake description: studio ops + renders</div>
+              </div>
+            </div>
+            <div class="progress-section">
+              <div class="progress-header">
+                <span class="progress-label">DAILY PROGRESS</span>
+                <span class="progress-count">3 / 5 Complete</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" style="width: 60%;"></div>
+              </div>
+            </div>
+            <div class="tasks-list">
+              <div class="task-category">
+                <div class="category-header">
+                  <div class="category-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L14.4 8.8L22 9.6L16.4 14.4L18 22L12 18L6 22L7.6 14.4L2 9.6L9.6 8.8L12 2Z"/></svg>
+                  </div>
+                  GETTING STARTED
+                </div>
+                <div class="task-item completed">
+                  <div class="task-checkbox checked"></div>
+                  <div class="task-content">
+                    <div class="task-text">Assemble 3D shot list</div>
+                    <div class="task-reward">+50 XP</div>
+                  </div>
+                  <span class="task-badge tutorial">TUTORIAL</span>
+                </div>
+                <div class="task-item">
+                  <div class="task-checkbox"></div>
+                  <div class="task-content">
+                    <div class="task-text">Grade new music video</div>
+                    <div class="task-reward">+75 XP</div>
+                  </div>
+                  <span class="task-badge game">GAME</span>
+                </div>
+              </div>
+              <div class="task-category">
+                <div class="category-header accent-alt">
+                  <div class="category-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2z"/></svg>
+                  </div>
+                  DAILY CHALLENGES
+                </div>
+                <div class="task-item completed">
+                  <div class="task-checkbox checked"></div>
+                  <div class="task-content">
+                    <div class="task-text">Render teaser loop</div>
+                    <div class="task-reward">+100 XP</div>
+                  </div>
+                  <span class="task-badge challenge">CHALLENGE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mac-window depth brb-window">
+          <div class="title-bar">
+            <div class="close-box">
+              <div class="close-box-lines"></div>
+            </div>
+            <span class="title-text">* System Message *</span>
+            <div class="close-box hidden"></div>
+          </div>
+          <div class="window-content centered">
+            <div class="pixel-mac">
+              <div class="mac-screen">
+                <div class="mac-screen-inner">
+                  <span class="screen-content">...</span>
+                </div>
+              </div>
+              <div class="mac-body">
+                <div class="mac-logo"></div>
+              </div>
+            </div>
+            <div class="brb-text">RENDERING</div>
+            <div class="sub-text">Fake description: stitching frames...</div>
+            <div class="loading-container">
+              <div class="loading-bar"></div>
+            </div>
+          </div>
+          <div class="bottom-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Create the opportunity • Build the moment • </span>
+        <span>Create the opportunity • Build the moment • </span>
+        <span>Create the opportunity • Build the moment • </span>
+      </div>
     </div>
+
+    <section class="featured">
+      <div class="featured-header">
+        <h2>Featured</h2>
+        <span class="featured-subtitle">Fake description: select campaigns + experiments</span>
+      </div>
+      <div class="featured-grid">
+        <article class="featured-card window depth">
+          <div class="title-bar">
+            <span class="title-text">* Neon Drift *</span>
+          </div>
+          <div class="window-content">
+            Fake description: 3D environment + title sequence for a synthwave short.
+          </div>
+        </article>
+        <article class="featured-card window depth">
+          <div class="title-bar">
+            <span class="title-text">* Echo Bloom *</span>
+          </div>
+          <div class="window-content">
+            Fake description: editorial cut with chromatic grade and motion typography.
+          </div>
+        </article>
+        <article class="featured-card window depth">
+          <div class="title-bar">
+            <span class="title-text">* Field Notes *</span>
+          </div>
+          <div class="window-content">
+            Fake description: wearable AR concept built for a pop-up installation.
+          </div>
+        </article>
+      </div>
+      <div class="partner-strip">
+        <span>Selected partners</span>
+        <div class="partner-chips">
+          <span class="partner-chip">Brand One</span>
+          <span class="partner-chip">Brand Two</span>
+          <span class="partner-chip">Brand Three</span>
+          <span class="partner-chip">Brand Four</span>
+        </div>
+      </div>
+    </section>
+
+    <main class="sections">
+      <section id="about" class="panel window depth">
+        <div class="title-bar">
+          <span class="title-text">* About *</span>
+        </div>
+        <div class="window-content">
+          <p>Fake description: My work blends cinematic pacing with stylized 3D worlds and an analog UI aesthetic.</p>
+        </div>
+      </section>
+
+      <section id="artwork" class="panel window depth">
+        <div class="title-bar">
+          <span class="title-text">* Artwork *</span>
+        </div>
+        <div class="window-content">
+          <p>Fake description: Selected frames, renders, and storyboards that explore mood, color, and motion.</p>
+          <div class="card-grid">
+            <div class="card">Fake artwork: neon alley scene</div>
+            <div class="card">Fake artwork: liquid chrome portrait</div>
+            <div class="card">Fake artwork: retro title sequence</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="code" class="panel window depth">
+        <div class="title-bar">
+          <span class="title-text">* Code *</span>
+        </div>
+        <div class="window-content">
+          <p>Fake description: Interactive tools, shaders, and web experiments that bring motion to the screen.</p>
+          <div class="code-snippet">
+            <span>scene.render(frame).grade("dream haze").export("4k")</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="music" class="panel window depth">
+        <div class="title-bar">
+          <span class="title-text">* Music *</span>
+        </div>
+        <div class="window-content">
+          <p>Fake description: Sound palettes and scoring sketches built for rhythm-driven visuals.</p>
+          <div class="mixer">
+            <div class="mixer-bar" style="height: 65%;"></div>
+            <div class="mixer-bar" style="height: 80%;"></div>
+            <div class="mixer-bar" style="height: 45%;"></div>
+            <div class="mixer-bar" style="height: 70%;"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="panel window depth">
+        <div class="title-bar">
+          <span class="title-text">* Contact *</span>
+        </div>
+        <div class="window-content">
+          <p>Fake description: Send a note, pitch a project, or request a reel.</p>
+          <form class="contact-form">
+            <input class="text-input" type="text" placeholder="Name">
+            <input class="text-input" type="email" placeholder="Email">
+            <textarea class="text-input" rows="4" placeholder="Message"></textarea>
+            <button class="btn" type="button">Send</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="writing" class="panel window depth">
+        <div class="title-bar">
+          <span class="title-text">* Writing *</span>
+        </div>
+        <div class="window-content">
+          <p>Fake description: Notes on visual storytelling, pipeline tips, and process breakdowns.</p>
+          <ul class="writing-list">
+            <li>Fake post: Building a retro-future title sequence</li>
+            <li>Fake post: Editing rhythm for short-form campaigns</li>
+            <li>Fake post: Designing a 3D world from one sound</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="donate" class="panel window depth donate">
+        <div class="title-bar">
+          <span class="title-text">* Donate *</span>
+        </div>
+        <div class="window-content">
+          <p>Fake description: Help fuel personal films, open-source tools, and community workshops.</p>
+          <button class="btn">Support the Studio</button>
+        </div>
+      </section>
+    </main>
+
+    <section class="mute-section">
+      <div class="mac-window depth">
+        <div class="title-bar">
+          <div class="close-box"></div>
+          <span class="title-text">* Sound Switch *</span>
+          <div class="close-box hidden"></div>
+        </div>
+        <div class="window-content centered">
+          <button class="mute-button" id="muteBtn" type="button">
+            <div class="mic-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="2" width="6" height="12" rx="3"/>
+                <path d="M5 10V12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12V10" stroke-width="2" fill="none"/>
+                <line x1="12" y1="19" x2="12" y2="23" stroke-width="2"/>
+                <line x1="8" y1="23" x2="16" y2="23" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="mute-slash"></div>
+            <div class="status-indicator"></div>
+          </button>
+        </div>
+        <div class="bottom-bar"></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>Fake description: Based in your city, open to global collabs.</span>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
