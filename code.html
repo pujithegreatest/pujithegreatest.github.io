@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Puji — Code</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Code / Glitch">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body data-theme="8bit" data-mode="light">
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">PUJI</div>
+        <div class="brand-tag">video editor / 3d designer / world builder</div>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="artwork.html">Artwork</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="code.html" class="active">Code</a>
+        <a href="music.html">Music</a>
+        <a href="contact.html">Contact</a>
+        <a href="writing.html">Writing</a>
+        <a href="donate.html">Donate</a>
+      </nav>
+
+      <div class="theme-controls window depth">
+        <label class="control">
+          <span>Theme</span>
+          <select id="themeSelect">
+            <option value="8bit">8-Bit Classic</option>
+            <option value="ocean">Ocean Blue</option>
+            <option value="sunset">Sunset Orange</option>
+            <option value="forest">Forest Green</option>
+            <option value="royal">Royal Purple</option>
+          </select>
+        </label>
+        <label class="control toggle">
+          <input type="checkbox" id="modeToggle">
+          <span>Dark mode</span>
+        </label>
+        <button type="button" id="randomizeTheme" class="btn">Shuffle</button>
+      </div>
+    </header>
+
+    <main class="sections">
+      <section id="code" class="panel window depth">
+        <div class="title-bar">
+          <div class="close-box"><div class="close-box-lines"></div></div>
+          <span class="title-text">Code // Glitch</span>
+          <div class="close-box hidden"></div>
+        </div>
+        <div class="window-content hacker-ui full-height">
+          <div class="ide-layout">
+            <div class="sidebar-tree">
+              <div class="tree-root">/root/studio</div>
+              <ul class="tree-list">
+                <li><span class="icon">📁</span> src</li>
+                <li>
+                  <span class="icon">📂</span> components
+                  <ul>
+                     <li><span class="icon">📄</span> World.js</li>
+                     <li><span class="icon">📄</span> Player.ts</li>
+                     <li class="active"><span class="icon">📄</span> Glitch.glsl</li>
+                  </ul>
+                </li>
+                <li><span class="icon">📄</span> package.json</li>
+              </ul>
+            </div>
+            
+            <div class="editor-area">
+              <div class="tab-bar">
+                <div class="tab active">Glitch.glsl</div>
+                <div class="tab">World.js</div>
+              </div>
+              <div class="code-view">
+                <div class="line-numbers">
+                  1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14
+                </div>
+                <pre><code><span class="keyword">void</span> main() {
+  vec2 uv = gl_FragCoord.xy / resolution.xy;
+  <span class="comment">// Datamosh effect</span>
+  float time = u_time * <span class="number">0.5</span>;
+  vec3 color = texture2D(u_texture, uv).rgb;
+  
+  <span class="keyword">if</span> (uv.y > sin(time)) {
+    color.r = <span class="number">0.0</span>; <span class="comment">// glitch red</span>
+  }
+  
+  gl_FragColor = vec4(color, <span class="number">1.0</span>);
+}
+
+<span class="keyword">function</span> init() {
+  <span class="comment">// System boot...</span>
+  return <span class="number">true</span>;
+}</code></pre>
+              </div>
+              <div class="terminal-log">
+                 <div>> building modules...</div>
+                 <div class="success">> build success (420ms)</div>
+                 <div class="cursor-blink">_</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="system-monitor">
+             <div class="monitor-block">
+               <label>CPU</label>
+               <div class="bar-graph"><div class="fill" style="width: 45%"></div></div>
+             </div>
+             <div class="monitor-block">
+               <label>MEM</label>
+               <div class="bar-graph"><div class="fill" style="width: 82%"></div></div>
+             </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Fake description: Based in your city, open to global collabs.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

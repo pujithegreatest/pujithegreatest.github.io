@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Puji — Contact</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Contact Puji Studio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body data-theme="8bit" data-mode="light">
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">PUJI</div>
+        <div class="brand-tag">video editor / 3d designer / world builder</div>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="artwork.html">Artwork</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="code.html">Code</a>
+        <a href="music.html">Music</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="writing.html">Writing</a>
+        <a href="donate.html">Donate</a>
+      </nav>
+
+      <div class="theme-controls window depth">
+        <label class="control">
+          <span>Theme</span>
+          <select id="themeSelect">
+            <option value="8bit">8-Bit Classic</option>
+            <option value="ocean">Ocean Blue</option>
+            <option value="sunset">Sunset Orange</option>
+            <option value="forest">Forest Green</option>
+            <option value="royal">Royal Purple</option>
+          </select>
+        </label>
+        <label class="control toggle">
+          <input type="checkbox" id="modeToggle">
+          <span>Dark mode</span>
+        </label>
+        <button type="button" id="randomizeTheme" class="btn">Shuffle</button>
+      </div>
+    </header>
+
+    <main class="sections">
+      <section id="contact" class="panel window depth">
+        <div class="title-bar">
+          <span class="title-text">Contact</span>
+        </div>
+        <div class="window-content">
+          <p>Fake description: Send a note, pitch a project, or request a reel.</p>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">hello@puji.studio</div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">Studio</div>
+              <div class="contact-value">Fake Description: Downtown Lab</div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">Social</div>
+              <div class="contact-value">@pujiworld</div>
+            </div>
+          </div>
+          <form class="contact-form">
+            <input class="text-input" type="text" placeholder="Name">
+            <input class="text-input" type="email" placeholder="Email">
+            <textarea class="text-input" rows="4" placeholder="Message"></textarea>
+            <button class="btn" type="button">Send</button>
+          </form>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Fake description: Based in your city, open to global collabs.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
