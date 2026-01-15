@@ -1418,11 +1418,24 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   position: relative;
 }
 
+.mute-button.header-mute {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
 .mute-button svg {
   width: 40px;
   height: 40px;
   fill: var(--secondary-text);
   stroke: var(--secondary-text);
+}
+
+.mute-button.header-mute svg {
+  width: 20px;
+  height: 20px;
 }
 
 .mute-button.muted {
@@ -1453,6 +1466,12 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   background: var(--background);
 }
 
+.mute-button.header-mute.muted .mute-slash {
+  height: 35px;
+  margin-top: -17.5px;
+  margin-left: -1px;
+}
+
 .status-indicator {
   position: absolute;
   bottom: 6px;
@@ -1462,6 +1481,13 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   background: var(--accent-3);
   border: 1px solid var(--secondary-text);
   animation: blink 1s ease-in-out infinite;
+}
+
+.mute-button.header-mute .status-indicator {
+  bottom: 3px;
+  right: 3px;
+  width: 6px;
+  height: 6px;
 }
 
 .mute-button.muted .status-indicator {
