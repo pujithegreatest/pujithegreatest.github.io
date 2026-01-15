@@ -8,7 +8,7 @@
   --accent-4: #c0a77f;
   --inset-light: #ffffff;
   --inset-dark: #9db8b6;
-  --leaf-cursor: url("./leaf.svg") 16 16, auto;
+  --leaf-cursor: url("./cursor.svg") 12 12, auto;
 }
 
 body[data-theme="8bit"][data-mode="light"] {
@@ -144,7 +144,24 @@ body {
   color: var(--text);
   font-family: "Chicago", "Geneva", "Monaco", "Courier New", monospace;
   letter-spacing: 0.2px;
-  cursor: var(--leaf-cursor);
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  color: var(--text);
+  transition: transform 0.1s ease, color 0.2s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  color: var(--accent-1);
 }
 
 a,
@@ -152,7 +169,7 @@ button,
 select,
 input,
 textarea {
-  cursor: var(--leaf-cursor);
+  cursor: none;
 }
 
 a {
