@@ -45,18 +45,28 @@
           <span>Dark mode</span>
         </label>
         <button type="button" id="randomizeTheme" class="btn">Shuffle</button>
-        <button class="mute-button header-mute" id="muteBtn" type="button" aria-label="Toggle sound">
-          <div class="mic-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="9" y="2" width="6" height="12" rx="3"/>
-              <path d="M5 10V12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12V10" stroke-width="2" fill="none"/>
-              <line x1="12" y1="19" x2="12" y2="23" stroke-width="2"/>
-              <line x1="8" y1="23" x2="16" y2="23" stroke-width="2"/>
-            </svg>
+        <div class="sound-switch-window window depth header-mute">
+          <div class="title-bar">
+            <div class="close-box"></div>
+            <span class="title-text">* Sound Switch *</span>
+            <div class="close-box hidden"></div>
           </div>
-          <div class="mute-slash"></div>
-          <div class="status-indicator"></div>
-        </button>
+          <div class="window-content centered">
+            <button class="mute-button header-mute" id="muteBtn" type="button" aria-label="Toggle sound">
+              <div class="mic-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="9" y="2" width="6" height="12" rx="3"/>
+                  <path d="M5 10V12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12V10" stroke-width="2" fill="none"/>
+                  <line x1="12" y1="19" x2="12" y2="23" stroke-width="2"/>
+                  <line x1="8" y1="23" x2="16" y2="23" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="mute-slash"></div>
+              <div class="status-indicator"></div>
+            </button>
+          </div>
+          <div class="bottom-bar"></div>
+        </div>
       </div>
     </header>
 

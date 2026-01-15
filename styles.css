@@ -1418,11 +1418,42 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   position: relative;
 }
 
+.sound-switch-window.header-mute {
+  width: 100px;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.sound-switch-window.header-mute .title-bar {
+  height: 18px;
+  padding: 0 4px;
+}
+
+.sound-switch-window.header-mute .title-text {
+  font-size: 8px;
+  padding: 1px 4px;
+  margin: 0 4px;
+}
+
+.sound-switch-window.header-mute .close-box {
+  width: 10px;
+  height: 10px;
+}
+
+.sound-switch-window.header-mute .window-content {
+  padding: 6px;
+  min-height: auto;
+}
+
+.sound-switch-window.header-mute .bottom-bar {
+  height: 4px;
+}
+
 .mute-button.header-mute {
   width: 40px;
   height: 40px;
   padding: 0;
-  margin-left: 8px;
+  margin: 0;
   flex-shrink: 0;
 }
 
