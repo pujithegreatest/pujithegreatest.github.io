@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Puji — Favs</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Favs / Favorites">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body data-theme="8bit" data-mode="light">
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">PUJI</div>
+        <div class="brand-tag">video editor / 3d designer / world builder</div>
+      </div>
+
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="artwork.html">Artwork</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="code.html">Code</a>
+        <a href="music.html">Music</a>
+        <a href="contact.html">Contact</a>
+        <a href="favs.html" class="active">Favs</a>
+        <a href="writing.html">Writing</a>
+        <a href="plans.html">Plans</a>
+        <a href="donate.html">Donate</a>
+      </nav>
+
+      <div class="theme-controls window depth">
+        <label class="control">
+          <span>Theme</span>
+          <select id="themeSelect">
+            <option value="8bit">8-Bit Classic</option>
+            <option value="ocean">Ocean Blue</option>
+            <option value="sunset">Sunset Orange</option>
+            <option value="forest">Forest Green</option>
+            <option value="royal">Royal Purple</option>
+          </select>
+        </label>
+        <label class="control toggle">
+          <input type="checkbox" id="modeToggle">
+          <span>Dark mode</span>
+        </label>
+        <button type="button" id="randomizeTheme" class="btn">Shuffle</button>
+        <div class="sound-switch-window window depth header-mute">
+          <div class="title-bar">
+            <div class="close-box"></div>
+            <span class="title-text">* Sound Switch *</span>
+            <div class="close-box hidden"></div>
+          </div>
+          <div class="window-content centered">
+            <button class="mute-button header-mute" id="muteBtn" type="button" aria-label="Toggle sound">
+              <div class="mic-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="9" y="2" width="6" height="12" rx="3"/>
+                  <path d="M5 10V12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12V10" stroke-width="2" fill="none"/>
+                  <line x1="12" y1="19" x2="12" y2="23" stroke-width="2"/>
+                  <line x1="8" y1="23" x2="16" y2="23" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="mute-slash"></div>
+              <div class="status-indicator"></div>
+            </button>
+          </div>
+          <div class="bottom-bar"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="sections">
+      <section id="favs" class="panel window depth">
+        <div class="title-bar">
+          <div class="close-box"><div class="close-box-lines"></div></div>
+          <span class="title-text">Favs</span>
+          <div class="close-box hidden"></div>
+        </div>
+        <div class="window-content">
+          <div class="writing-categories">
+            <div class="writing-category">
+              <h3 class="category-title">TOP ANIME</h3>
+              <div class="article-list">
+                <div class="article-item">
+                  <span class="article-number">01</span>
+                  <div class="article-info">
+                    <span class="article-title">Akira (1988) - The Blueprint</span>
+                    <span class="article-meta">Cyberpunk • Neo-Tokyo • Tetsuo</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-number">02</span>
+                  <div class="article-info">
+                    <span class="article-title">Ghost in the Shell - Philosophy Meets Tech</span>
+                    <span class="article-meta">Sci-Fi • Identity • Major Motoko</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-number">03</span>
+                  <div class="article-info">
+                    <span class="article-title">Cowboy Bebop - Space Jazz Aesthetic</span>
+                    <span class="article-meta">Noir • Soundtrack • Spike Spiegel</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-number">04</span>
+                  <div class="article-info">
+                    <span class="article-title">Neon Genesis Evangelion - Deconstruction</span>
+                    <span class="article-meta">Mecha • Psychology • Shinji Ikari</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="writing-category">
+              <h3 class="category-title">MY HEROES</h3>
+              <div class="article-list">
+                <div class="article-item">
+                  <span class="article-number">01</span>
+                  <div class="article-info">
+                    <span class="article-title">Kanye West - The Creative Process</span>
+                    <span class="article-meta">Music • Production • Vision</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-number">02</span>
+                  <div class="article-info">
+                    <span class="article-title">Tyler, The Creator - Visual Director</span>
+                    <span class="article-meta">Aesthetic • Branding • Golf Wang</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-number">03</span>
+                  <div class="article-info">
+                    <span class="article-title">Katsuhiro Otomo - Master Animator</span>
+                    <span class="article-meta">Animation • Storytelling • Detail</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-number">04</span>
+                  <div class="article-info">
+                    <span class="article-title">Hideo Kojima - Game Auteur</span>
+                    <span class="article-meta">Narrative • Innovation • Metal Gear</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="writing-category">
+              <h3 class="category-title">TOP GAMES</h3>
+              <div class="article-list">
+                <div class="article-item">
+                  <span class="article-number">01</span>
+                  <div class="article-info">
+                    <span class="article-title">Metal Gear Solid - Stealth Revolution</span>
+                    <span class="article-meta">PS1 • Tactical • Snake</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-number">02</span>
+                  <div class="article-info">
+                    <span class="article-title">Final Fantasy VII - Emotional Depth</span>
+                    <span class="article-meta">RPG • Story • Cloud Strife</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-number">03</span>
+                  <div class="article-info">
+                    <span class="article-title">Silent Hill 2 - Psychological Horror</span>
+                    <span class="article-meta">Survival • Atmosphere • James Sunderland</span>
+                  </div>
+                </div>
+                <div class="article-item">
+                  <span class="article-number">04</span>
+                  <div class="article-info">
+                    <span class="article-title">Shadow of the Colossus - Minimalist Epic</span>
+                    <span class="article-meta">Adventure • Scale • Wander</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/AntiqueCamera.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Fake description: Based in your city, open to global collabs.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

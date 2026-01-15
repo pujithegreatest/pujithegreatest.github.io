@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Puji — Music</title>
+    <title>Puji — Plans</title>
     <meta charset="utf-8">
-    <meta name="description" content="Music / Yo MTV">
+    <meta name="description" content="Plans / Roadmap">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
@@ -23,11 +23,11 @@
         <a href="artwork.html">Artwork</a>
         <a href="fashion.html">Fashion</a>
         <a href="code.html">Code</a>
-        <a href="music.html" class="active">Music</a>
+        <a href="music.html">Music</a>
         <a href="contact.html">Contact</a>
         <a href="favs.html">Favs</a>
         <a href="writing.html">Writing</a>
-        <a href="plans.html">Plans</a>
+        <a href="plans.html" class="active">Plans</a>
         <a href="donate.html">Donate</a>
       </nav>
 
@@ -73,65 +73,43 @@
     </header>
 
     <main class="sections">
-      <section id="music" class="panel window depth">
+      <section id="plans" class="panel window depth">
         <div class="title-bar">
           <div class="close-box"><div class="close-box-lines"></div></div>
-          <span class="title-text">Music / Yo MTV</span>
+          <span class="title-text">Plans</span>
           <div class="close-box hidden"></div>
         </div>
-        <div class="window-content mpc-ui">
-          <div class="display-screen">
-            <div class="screen-header">
-               <span>SAMPLER_MODE</span>
-               <span>BPM: 94.0</span>
+        <div class="window-content">
+          <p>Fake description: Upcoming projects, goals, and roadmap for the studio.</p>
+          <div class="plans-list">
+            <div class="plan-item">
+              <span class="plan-status">UPCOMING</span>
+              <span class="plan-title">New Music Video Project</span>
+              <span class="plan-date">Q2 2026</span>
             </div>
-            <div class="track-info-large">
-               <marquee scrollamount="4">NOW PLAYING: NEON_PULSE_V2.MP3 /// PROD. BY PUJI /// </marquee>
+            <div class="plan-item">
+              <span class="plan-status">IN PROGRESS</span>
+              <span class="plan-title">3D Environment Series</span>
+              <span class="plan-date">Q1 2026</span>
             </div>
-            <div class="waveform-viz">
-               <div class="bar" style="height: 40%"></div>
-               <div class="bar" style="height: 80%"></div>
-               <div class="bar" style="height: 60%"></div>
-               <div class="bar" style="height: 90%"></div>
-               <div class="bar" style="height: 30%"></div>
-               <div class="bar" style="height: 70%"></div>
-               <div class="bar" style="height: 50%"></div>
+            <div class="plan-item">
+              <span class="plan-status">PLANNED</span>
+              <span class="plan-title">Fashion Collection Launch</span>
+              <span class="plan-date">Q3 2026</span>
+            </div>
+            <div class="plan-item">
+              <span class="plan-status">IDEA</span>
+              <span class="plan-title">Interactive Web Experience</span>
+              <span class="plan-date">TBD</span>
+            </div>
+            <div class="plan-item">
+              <span class="plan-status">UPCOMING</span>
+              <span class="plan-title">Collaboration Album</span>
+              <span class="plan-date">Q2 2026</span>
             </div>
           </div>
-          
-          <div class="controls-area">
-             <div class="pad-grid">
-               <button class="mpc-pad">KICK</button>
-               <button class="mpc-pad">SNARE</button>
-               <button class="mpc-pad">HAT</button>
-               <button class="mpc-pad active">VOX</button>
-               <button class="mpc-pad">808</button>
-               <button class="mpc-pad">PERC</button>
-               <button class="mpc-pad">FX</button>
-               <button class="mpc-pad">STAB</button>
-             </div>
-             
-             <div class="faders">
-               <div class="fader-group">
-                 <label>VOL</label>
-                 <input type="range" orient="vertical" min="0" max="100" value="80">
-               </div>
-               <div class="fader-group">
-                 <label>PITCH</label>
-                 <input type="range" orient="vertical" min="0" max="100" value="50">
-               </div>
-             </div>
-          </div>
-
-          <div class="transport-big">
-            <button class="trans-btn play">▶ PLAY</button>
-            <button class="trans-btn stop">■ STOP</button>
-            <button class="trans-btn rec">● REC</button>
-          </div>
-          
-          <div class="page-gallery-hidden">
-             <!-- 3D model hidden but available for context if needed -->
-             <model-viewer src="https://modelviewer.dev/shared-assets/models/Horse.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+          <div class="page-gallery">
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/AntiqueCamera.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
           </div>
         </div>
       </section>
