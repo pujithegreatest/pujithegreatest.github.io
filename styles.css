@@ -885,7 +885,7 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
 #fashion .rec-dot {
   color: red;
   animation: blink 1s infinite;
-  transform: translateY(-8px);
+  transform: translateY(-20px);
   display: inline-block;
 }
 
