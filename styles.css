@@ -8,7 +8,7 @@
   --accent-4: #c0a77f;
   --inset-light: #ffffff;
   --inset-dark: #9db8b6;
-  --leaf-cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M6 20c6-8 14-12 20-12-2 9-7 17-14 20-3 1-6-1-6-4z' fill='%2306A7A1' stroke='%233D3737' stroke-width='1'/%3E%3Cpath d='M10 22c6-2 10-6 14-10' stroke='%233D3737' stroke-width='1' fill='none'/%3E%3C/svg%3E") 16 16, auto;
+  --leaf-cursor: url("./leaf.svg") 16 16, auto;
 }
 
 body[data-theme="8bit"][data-mode="light"] {
