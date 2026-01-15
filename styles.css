@@ -885,6 +885,8 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
 #fashion .rec-dot {
   color: red;
   animation: blink 1s infinite;
+  transform: translateY(-8px);
+  display: inline-block;
 }
 
 #fashion .cam-crosshair {
