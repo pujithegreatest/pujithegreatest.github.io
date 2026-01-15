@@ -1613,13 +1613,15 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   letter-spacing: 0.5px;
 }
 
-#writing .writing-zine {
+#writing .writing-zine,
+#favs .writing-zine {
   display: grid;
   gap: 12px;
   margin-top: 16px;
 }
 
-#writing .zine-card {
+#writing .zine-card,
+#favs .zine-card {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -1630,7 +1632,8 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
     inset 2px 2px 0 var(--inset-light);
 }
 
-#writing .zine-issue {
+#writing .zine-issue,
+#favs .zine-issue {
   font-size: 8px;
   font-weight: bold;
   color: var(--accent-1);
@@ -1638,7 +1641,8 @@ body, .site-header, .site-footer, .hero, .sections, .featured, .marquee {
   letter-spacing: 1px;
 }
 
-#writing .zine-title {
+#writing .zine-title,
+#favs .zine-title {
   font-size: 11px;
   color: var(--text);
   line-height: 1.4;
